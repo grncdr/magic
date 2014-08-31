@@ -101,6 +101,7 @@ function compileMacros (module, content) {
       filename: module.filename,
       sourceMap: true
     });
+    module.filename = module.filename.replace(/\.sjs/, '.js');
     return result.code;
   } catch (err) {
     console.error('SweetJS failed to compile ' + module.filename);
