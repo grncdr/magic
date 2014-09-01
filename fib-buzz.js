@@ -1,7 +1,10 @@
 /**
  * FibBuzz
  *
- * Uses pattern matching from sparker & generators in the same file
+ * Example of using pattern matching & generators in the same file, runs on node>=0.8
+ * 
+ * - Pattern matching macros come from https://github.com/natefaubion/sparkler
+ * - Generators are compiled by https://github.com/facebook/regenerator
  */
 
 requireMacros('sparkler/macros');
@@ -14,9 +17,6 @@ for (var n = 0; n < 10; n++) {
   console.log(f, c);
 }
 
-/**
- * Using sparkler pattern matching
- */
 function chooseColor {
   n @ Number if multipleOf(n, 15) => 'red',
   n @ Number if multipleOf(n, 3) => 'yellow',
